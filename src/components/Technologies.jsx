@@ -45,7 +45,7 @@ export default function Technologies() {
           </div>
           <div className="flex items-end">
             <p className="text-dark-400 text-[15px] leading-relaxed">
-              Our team stays current with the tools that matter — so your stack is never a bottleneck.
+              Our team stays current with the tools that matter  so your stack is never a bottleneck.
             </p>
           </div>
         </motion.div>

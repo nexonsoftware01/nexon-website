@@ -14,11 +14,11 @@ export default function ThankYou() {
       <main className="relative min-h-[calc(100vh-140px)] flex items-center justify-center px-5 sm:px-8 py-28 sm:py-32 overflow-hidden" style={{ background: 'var(--color-bg-soft)' }}>
         <div
           className="hero-shape"
-          style={{ top: '-80px', right: '-120px', width: '420px', height: '420px', background: '#B8F456' }}
+          style={{ top: '-80px', right: '-120px', width: '420px', height: '420px', background: '#38c3f6' }}
         />
         <div
           className="hero-shape"
-          style={{ bottom: '-120px', left: '-120px', width: '360px', height: '360px', background: '#B8F456', opacity: 0.3 }}
+          style={{ bottom: '-120px', left: '-120px', width: '360px', height: '360px', background: '#38c3f6', opacity: 0.3 }}
         />
 
         <div className="relative z-[2] max-w-[720px] text-center">

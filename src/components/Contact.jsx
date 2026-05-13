@@ -33,7 +33,7 @@ export default function Contact() {
     <section id="contact" className="py-20 lg:py-28 px-5 sm:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-5 gap-14">
-          {/* Left — info */}
+          {/* Left  info */}
           <motion.div
             className="lg:col-span-2"
             initial={{ opacity: 0, y: 16 }}
@@ -74,7 +74,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right — form */}
+          {/* Right  form */}
           <motion.div
             className="lg:col-span-3"
             initial={{ opacity: 0, y: 16 }}
@@ -118,7 +118,7 @@ export default function Contact() {
                 className="btn-primary flex items-center justify-center gap-2 px-7 py-3 rounded-lg text-white font-semibold text-sm disabled:opacity-80"
               >
                 {sent ? (
-                  <><HiCheckCircle className="w-5 h-5" /> Sent — we'll be in touch</>
+                  <><HiCheckCircle className="w-5 h-5" /> Sent  we'll be in touch</>
                 ) : (
                   <>Send message</>
                 )}

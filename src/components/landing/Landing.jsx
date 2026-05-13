@@ -27,8 +27,8 @@ export default function Landing() {
       <Header onCtaClick={scrollToForm} />
       <main>
         <Hero onCtaClick={scrollToForm} />
-        <Services />
         <LeadForm innerRef={formRef} />
+        <Services onCtaClick={scrollToForm} />
         <Stats />
         <TrustLogos />
       </main>

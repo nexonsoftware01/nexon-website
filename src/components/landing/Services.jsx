@@ -1,4 +1,29 @@
 const ICONS = {
+  aiml: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v12M6 12h12"/><circle cx="12" cy="9" r="1.5"/><circle cx="12" cy="15" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/>
+    </svg>
+  ),
+  data: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 3v18h18"/><path d="M18 17V9M12 17V5M6 17v-3"/><circle cx="18" cy="9" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="6" cy="14" r="1"/>
+    </svg>
+  ),
+  genai: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><circle cx="12" cy="12" r="2"/>
+    </svg>
+  ),
+  engineer: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"/>
+    </svg>
+  ),
+  cloud: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+    </svg>
+  ),
   staff: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
@@ -33,6 +58,36 @@ const ICONS = {
 
 const SERVICES = [
   {
+    icon: ICONS.aiml,
+    title: 'AI/ML Solutions',
+    desc: 'Build intelligent systems with machine learning models. Predictive analytics, computer vision, and NLP solutions tailored to your business.',
+    tags: ['ML', 'TensorFlow', 'Python'],
+  },
+  {
+    icon: ICONS.data,
+    title: 'Data Analyst',
+    desc: 'Transform raw data into actionable insights. Advanced analytics, dashboards, and reporting for data-driven decision making.',
+    tags: ['Analytics', 'BI', 'SQL'],
+  },
+  {
+    icon: ICONS.genai,
+    title: 'Generative AI',
+    desc: 'Leverage cutting-edge generative AI for content creation, automation, and intelligent workflows at scale.',
+    tags: ['GenAI', 'LLM', 'Automation'],
+  },
+  {
+    icon: ICONS.engineer,
+    title: 'Data Engineer',
+    desc: 'Design and build robust data pipelines and infrastructure. ETL, big data, and cloud data warehousing solutions.',
+    tags: ['ETL', 'BigData', 'Cloud'],
+  },
+  {
+    icon: ICONS.cloud,
+    title: 'Cloud Computing',
+    desc: 'Architect and deploy scalable cloud solutions. AWS, Azure, GCP expertise for infrastructure, migration, and optimization.',
+    tags: ['AWS', 'Azure', 'GCP'],
+  },
+  {
     icon: ICONS.staff,
     title: 'IT Staffing & Recruitment',
     desc: 'Fill critical roles in 24 hours. C2C, C2H, and permanent placements across engineering, data, and product.',
@@ -47,7 +102,7 @@ const SERVICES = [
   {
     icon: ICONS.phone,
     title: 'App Development',
-    desc: 'High-performance native and cross-platform mobile apps for iOS and Android — crafted, not templated.',
+    desc: 'High-performance native and cross-platform mobile apps for iOS and Android  crafted, not templated.',
     tags: ['iOS', 'Android', 'Flutter'],
   },
   {
@@ -70,30 +125,30 @@ const SERVICES = [
   },
 ];
 
-export default function Services() {
+export default function Services({ onCtaClick }) {
   return (
     <section id="services" className="relative py-24 sm:py-28 lg:py-32" style={{ background: 'var(--color-bg-soft)' }}>
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10">
         <div className="grid grid-cols-12 gap-8 mb-14 items-end">
           <div className="col-span-12 md:col-span-7">
-            <div className="eyebrow mb-4">— Core Capabilities</div>
+            <div className="eyebrow mb-4"> Core Capabilities</div>
             <h2 className="display-md text-[30px] sm:text-[40px] md:text-[48px] lg:text-[58px]" style={{ color: 'var(--color-ink)' }}>
               Everything you need to<br />
-              scale — in <span style={{ position: 'relative', display: 'inline-block' }}>
+              scale in <span style={{ position: 'relative', display: 'inline-block' }}>
                 <span style={{ position: 'relative', zIndex: 1 }}>one team.</span>
-                <span aria-hidden="true" style={{ position: 'absolute', left: 0, right: 0, bottom: '8%', height: '22%', background: 'var(--color-lime)', borderRadius: 3, zIndex: 0 }} />
+                {/* <span aria-hidden="true" style={{ position: 'absolute', left: 0, right: 0, bottom: '8%', height: '22%', background: 'var(--color-steel)', borderRadius: 3, zIndex: 0 }} /> */}
               </span>
             </h2>
           </div>
           <div className="col-span-12 md:col-span-5">
             <p className="text-[16.5px] leading-[1.6] max-w-[460px]" style={{ color: 'var(--color-muted)' }}>
-              Six core disciplines, one operating principle — bring your hardest problem first.
+              Six core disciplines, one operating principle bring your hardest problem first.
               We staff, design, and ship what your in-house team doesn't have the capacity for.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" onClick={onCtaClick}>
           {SERVICES.map((s) => (
             <article key={s.title} className="card card-soft">
               <div className="icon-chip">{s.icon}</div>
@@ -117,11 +172,11 @@ export default function Services() {
                     </span>
                   ))}
                 </div>
-                <div className="w-9 h-9 rounded-full flex items-center justify-center transition-all" style={{ background: 'var(--color-ink)', color: 'var(--color-bg)' }}>
+                <button onClick={onCtaClick} className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:scale-110 cursor-pointer" style={{ background: 'var(--color-ink)', color: 'var(--color-bg)' }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12h14M13 5l7 7-7 7"/>
                   </svg>
-                </div>
+                </button>
               </div>
             </article>
           ))}

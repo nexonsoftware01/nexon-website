@@ -9,10 +9,10 @@ const avatars = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 lg:py-24 px-5 sm:px-8" style={{ background: 'rgba(15,23,42,0.3)' }}>
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8" style={{ background: 'rgba(15,23,42,0.3)' }}>
       <div className="max-w-7xl mx-auto">
         <motion.p
-          className="text-dark-500 text-sm font-medium uppercase tracking-wider mb-10"
+          className="text-dark-500 text-xs sm:text-sm font-medium uppercase tracking-wider mb-6 sm:mb-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -21,7 +21,7 @@ export default function Testimonials() {
           What people are saying
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           {TESTIMONIALS.map((t, i) => (
             <motion.div
               key={i}
@@ -30,20 +30,20 @@ export default function Testimonials() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <blockquote className="text-dark-200 text-[15px] leading-relaxed mb-6">
+              <blockquote className="text-dark-200 text-sm sm:text-[15px] leading-relaxed mb-4 sm:mb-6">
                 "{t.quote}"
               </blockquote>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <img
                   src={avatars[i]}
                   alt={t.name}
-                  className="w-9 h-9 rounded-full object-cover"
+                  className="w-8 sm:w-9 h-8 sm:h-9 rounded-full object-cover"
                   style={{ border: '2px solid rgba(255,255,255,0.08)' }}
                   loading="lazy"
                 />
                 <div>
-                  <p className="text-white text-sm font-medium">{t.name}</p>
-                  <p className="text-dark-500 text-xs">{t.role} at {t.company}</p>
+                  <p className="text-white text-xs sm:text-sm font-medium">{t.name}</p>
+                  <p className="text-dark-500 text-[11px] sm:text-xs">{t.role} at {t.company}</p>
                 </div>
               </div>
             </motion.div>

@@ -34,7 +34,7 @@ export default function SuccessModal({ onClose }) {
               Intake received
             </span>
           </div>
-          <button onClick={onClose} className="text-[13.5px] font-semibold hover:text-[var(--color-lime-3)] transition-colors" style={{ color: 'var(--color-muted)' }}>
+          <button onClick={onClose} className="text-[13.5px] font-semibold hover:text-[var(--color-steel-3)] transition-colors" style={{ color: 'var(--color-muted)' }}>
             Close ×
           </button>
         </div>

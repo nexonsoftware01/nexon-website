@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Purple-blue gradient glow */}
       <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(99,102,241,0.12) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(59,130,246,0.08) 0%, transparent 50%)' }} />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-16 lg:pt-36 lg:pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full pt-20 pb-12 sm:pt-24 md:pt-28 lg:pt-36 lg:pb-24">
         {/* Main content */}
         <motion.div
           className="text-center max-w-4xl mx-auto"
@@ -37,33 +37,33 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <p className="text-primary-400 font-medium text-sm mb-5 tracking-widest uppercase">
+          <p className="text-primary-400 font-medium text-xs sm:text-sm mb-3 sm:mb-5 tracking-widest uppercase">
             IT Staffing &bull; Development &bull; AI Solutions
           </p>
 
-          <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-[4rem] leading-[1.1] tracking-tight text-white mb-6">
+          <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] leading-[1.1] tracking-tight text-white mb-4 sm:mb-6">
             Build Smarter.<br />
             <span className="gradient-text">Scale Faster.</span>
           </h1>
 
-          <div className="text-lg sm:text-xl text-dark-400 mb-3">
+          <div className="text-base sm:text-lg md:text-xl text-dark-400 mb-2 sm:mb-3">
             We specialize in{' '}
             <span className="text-white font-medium">{text}</span>
-            <span className="inline-block w-0.5 h-5 bg-primary-400 align-middle ml-0.5 cursor-blink" />
+            <span className="inline-block w-0.5 h-4 sm:h-5 bg-primary-400 align-middle ml-0.5 cursor-blink" />
           </div>
 
-          <p className="text-dark-500 text-[15px] leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-dark-500 text-sm sm:text-[15px] leading-relaxed mb-6 sm:mb-10 max-w-2xl mx-auto">
             Nexon Software Solutions connects companies with vetted IT professionals
-            and delivers production-ready software — staffing, development, testing,
+            and delivers production-ready software staffing, development, testing,
             AI, and consulting under one roof.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
-            <a href="#contact" className="btn-primary inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-white font-semibold text-sm">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-16">
+            <a href="#contact" className="btn-primary inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg text-white font-semibold text-sm w-full sm:w-auto">
               Let's Talk
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </a>
-            <a href="#services" className="btn-outline inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-dark-200 font-semibold text-sm">
+            <a href="#services" className="btn-outline inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg text-dark-200 font-semibold text-sm w-full sm:w-auto">
               Our Services
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </a>
@@ -72,8 +72,8 @@ export default function Hero() {
 
         {/* Stats bar */}
         <motion.div
-          className="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 32, divideColor: 'rgba(255,255,255,0.06)' }}
+          className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-0 lg:divide-x"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 24 }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -84,9 +84,9 @@ export default function Hero() {
             ['98%', 'Client Satisfaction'],
             ['6+', 'Years of Delivery'],
           ].map(([num, label]) => (
-            <div key={label} className="text-center px-4">
-              <p className="text-white font-display font-bold text-3xl lg:text-4xl">{num}</p>
-              <p className="text-dark-500 text-xs mt-1">{label}</p>
+            <div key={label} className="text-center px-2 sm:px-4 py-2 sm:py-0">
+              <p className="text-white font-display font-bold text-2xl sm:text-3xl md:text-4xl">{num}</p>
+              <p className="text-dark-500 text-xs sm:text-xs mt-1">{label}</p>
             </div>
           ))}
         </motion.div>

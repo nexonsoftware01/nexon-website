@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'Do you work with startups or only large enterprises?',
-    a: 'We work with companies of all sizes — from early-stage startups needing their first engineering hire to enterprises scaling teams across multiple geographies.',
+    a: 'We work with companies of all sizes  from early-stage startups needing their first engineering hire to enterprises scaling teams across multiple geographies.',
   },
   {
     q: 'What technologies does your development team specialize in?',
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'How do you ensure quality in software delivery?',
-    a: 'Every project includes dedicated QA — both manual and automated testing. We follow agile practices with regular demos, code reviews, and CI/CD pipelines to maintain high delivery standards.',
+    a: 'Every project includes dedicated QA  both manual and automated testing. We follow agile practices with regular demos, code reviews, and CI/CD pipelines to maintain high delivery standards.',
   },
 ];
 
