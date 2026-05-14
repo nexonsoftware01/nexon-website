@@ -10,7 +10,6 @@ function usePath() {
     const onPop = () => {
       setPath(window.location.pathname);
       window.scrollTo({ top: 0, behavior: 'auto' });
-      
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
