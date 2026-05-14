@@ -48,7 +48,7 @@ export default function Hero({ onCtaClick }) {
     }
   };
   return (
-    <section className="relative pt-32 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
+    <section className="relative pt-32 pb-20 sm:pb-24 lg:pb-32 overflow-hidden hero-pt-1024">
       {/* Soft lime shape */}
       <div
         className="hero-shape"

@@ -836,6 +836,13 @@ body {
   }
 }
 
+/* ─── 1024px Breakpoint Adjustments ─── */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .hero-pt-1024 {
+    padding-top: calc(2rem + 40px) !important; /* pt-8 (2rem) + 25px */
+  }
+}
+
 /* ─── Landscape Mode Adjustments ─── */
 @media (max-height: 600px) and (orientation: landscape) {
   /* Reduce top padding in landscape */

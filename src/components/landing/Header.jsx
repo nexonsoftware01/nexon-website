@@ -223,7 +223,7 @@ export default function Header({ onCtaClick }) {
 
           <button
             onClick={onCtaClick}
-            className="btn btn-outline !py-1 !px-2 !text-[12px] sm:!py-[10px] sm:!px-5 sm:!text-[10px]"
+            className="btn btn-outline !py-1 !px-2 !text-[12px] sm:!py-[10px] sm:!px-5 sm:!text-[10px] lg:!py-[12px] lg:!px-6 lg:!text-[13px] flex items-center gap-2"
           >
             Hire Now
             <svg
