@@ -107,7 +107,7 @@ export default function Hero({ onCtaClick }) {
             </p>
 
             <div className="reveal reveal-4 mt-10 flex flex-wrap gap-3 items-center">
-              <button onClick={onCtaClick} className="btn btn-lime !text-white">
+              <button onClick={onCtaClick} className="btn btn-lime !text-white !py-3 !px-6 !text-[15px] sm:!text-[16px]">
                 Get Started
                 <svg
                   className="arrow"
@@ -121,42 +121,12 @@ export default function Hero({ onCtaClick }) {
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </button>
-              <a href="#services" className="btn btn-outline">
-                Browse services
+              <a href="#services" className="btn btn-outline !py-3 !px-5 !text-[15px] sm:!text-[16px]">
+                IT Solutions
               </a>
-
-              <div
-                className="hidden md:flex items-center gap-3 ml-4 pl-6 border-l"
-                style={{ borderColor: "var(--color-line-2)" }}
-              >
-
-                <div className="flex space-x-0.5">
-                  {[
-                    "https://img.icons8.com/color/48/amazon.png",
-                    "https://img.icons8.com/fluency/48/google-logo.png",
-                    "https://img.icons8.com/3d-fluency/94/meta.png",
-                    "https://img.icons8.com/color/48/tesla-logo.png"
-                  ].map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt=""
-                      className="w-8 h-8 rounded-full border-[2.5px] border-white object-cover"
-                    />
-                  ))}
-                </div>
-                <div className="text-[13px] leading-tight">
-                  <div
-                    className="font-semibold"
-                    style={{ color: "var(--color-ink)" }}
-                  >
-                    500+ placements
-                  </div>
-                  <div style={{ color: "var(--color-muted-2)" }}>
-                    across India · US · UK
-                  </div>
-                </div>
-              </div>
+              <a href="/staffing?category=technology-staffing" className="btn btn-outline !py-3 !px-5 !text-[15px] sm:!text-[16px]">
+                Staffing Services
+              </a>
             </div>
 
             {/* mini stats strip */}

@@ -58,66 +58,77 @@ const ICONS = {
 
 const SERVICES = [
   {
+    slug: 'ai-ml-solutions',
     icon: ICONS.aiml,
     title: 'AI/ML Solutions',
     desc: 'Build intelligent systems with machine learning models. Predictive analytics, computer vision, and NLP solutions tailored to your business.',
     tags: ['ML', 'TensorFlow', 'Python'],
   },
   {
+    slug: 'data-analyst',
     icon: ICONS.data,
     title: 'Data Analyst',
     desc: 'Transform raw data into actionable insights. Advanced analytics, dashboards, and reporting for data-driven decision making.',
     tags: ['Analytics', 'BI', 'SQL'],
   },
   {
+    slug: 'generative-ai',
     icon: ICONS.genai,
     title: 'Generative AI',
     desc: 'Leverage cutting-edge generative AI for content creation, automation, and intelligent workflows at scale.',
     tags: ['GenAI', 'LLM', 'Automation'],
   },
   {
+    slug: 'data-engineer',
     icon: ICONS.engineer,
     title: 'Data Engineer',
     desc: 'Design and build robust data pipelines and infrastructure. ETL, big data, and cloud data warehousing solutions.',
     tags: ['ETL', 'BigData', 'Cloud'],
   },
   {
+    slug: 'cloud-computing',
     icon: ICONS.cloud,
     title: 'Cloud Computing',
     desc: 'Architect and deploy scalable cloud solutions. AWS, Azure, GCP expertise for infrastructure, migration, and optimization.',
     tags: ['AWS', 'Azure', 'GCP'],
   },
   {
+    slug: 'it-staffing-recruitment',
     icon: ICONS.staff,
     title: 'IT Staffing & Recruitment',
     desc: 'Fill critical roles in 24 hours. C2C, C2H, and permanent placements across engineering, data, and product.',
     tags: ['C2C', 'C2H', 'Perm'],
   },
   {
+    slug: 'software-development',
     icon: ICONS.code,
     title: 'Software Development',
     desc: 'Custom web platforms, internal tools, and SaaS products. Full-stack teams that ship weekly, not quarterly.',
     tags: ['Web', 'SaaS', 'APIs'],
   },
   {
+    slug: 'app-development',
     icon: ICONS.phone,
     title: 'App Development',
-    desc: 'High-performance native and cross-platform mobile apps for iOS and Android  crafted, not templated.',
+    desc: 'High-performance native and cross-platform mobile apps for iOS and Android crafted, not templated.',
     tags: ['iOS', 'Android', 'Flutter'],
   },
   {
+    slug: 'hr-solutions-rpo',
     icon: ICONS.hr,
     title: 'HR Solutions & RPO',
     desc: 'Outsourced recruitment that plugs into your ATS. Scale hiring without scaling headcount or overhead.',
     tags: ['RPO', 'ATS', 'Intake'],
   },
   {
+    slug: 'dedicated-developers',
     icon: ICONS.user,
     title: 'Dedicated Developers',
     desc: 'Hire vetted engineers on contract or permanent basis. Ramp in days, not weeks. You manage, we support.',
     tags: ['Contract', 'Perm', 'Remote'],
   },
   {
+    slug: 'devops-infrastructure',
     icon: ICONS.ops,
     title: 'DevOps & Infrastructure',
     desc: 'Streamline deployment pipelines, harden infrastructure, and unlock continuous delivery with senior SREs.',
@@ -126,6 +137,12 @@ const SERVICES = [
 ];
 
 export default function Services({ onCtaClick }) {
+  const handleServiceClick = (slug) => {
+    const url = `/application-services?category=${slug}`;
+    window.history.pushState({}, '', url);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
+
   return (
     <section id="services" className="relative py-24 sm:py-28 lg:py-32" style={{ background: 'var(--color-bg-soft)' }}>
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10">
@@ -136,7 +153,6 @@ export default function Services({ onCtaClick }) {
               Everything you need to<br />
               scale in <span style={{ position: 'relative', display: 'inline-block' }}>
                 <span style={{ position: 'relative', zIndex: 1 }}>one team.</span>
-                {/* <span aria-hidden="true" style={{ position: 'absolute', left: 0, right: 0, bottom: '8%', height: '22%', background: 'var(--color-steel)', borderRadius: 3, zIndex: 0 }} /> */}
               </span>
             </h2>
           </div>
@@ -148,9 +164,9 @@ export default function Services({ onCtaClick }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" onClick={onCtaClick}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((s) => (
-            <article key={s.title} className="card card-soft">
+            <article key={s.title} className="card card-soft cursor-pointer" onClick={() => handleServiceClick(s.slug)}>
               <div className="icon-chip">{s.icon}</div>
 
               <h3 className="mt-7 text-[22px] font-bold tracking-[-0.02em] leading-tight" style={{ color: 'var(--color-ink)' }}>
@@ -172,9 +188,17 @@ export default function Services({ onCtaClick }) {
                     </span>
                   ))}
                 </div>
-                <button onClick={onCtaClick} className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:scale-110 cursor-pointer" style={{ background: 'var(--color-ink)', color: 'var(--color-bg)' }}>
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleServiceClick(s.slug);
+                  }}
+                  className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:scale-110 cursor-pointer"
+                  style={{ background: 'var(--color-ink)', color: 'var(--color-bg)' }}
+                >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                    <path d="M5 12h14M13 5l7 7-7 7"/>
+                    <path d="M5 12h14M13 5l7 7-7 7" />
                   </svg>
                 </button>
               </div>
