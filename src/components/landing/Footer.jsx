@@ -81,11 +81,11 @@ export default function Footer() {
                 </svg>
 
                 <a
-                  href="tel:+919953315229"
+                  href="tel:+918929324727"
                   className="text-[13px] sm:text-[14.5px] leading-tight font-medium hover:text-[var(--color-steel)] transition-colors"
                   style={{ color: "var(--color-bg)" }}
                 >
-                  +91 99533 15229
+                  +91 8929324727
                 </a>
               </li>
 

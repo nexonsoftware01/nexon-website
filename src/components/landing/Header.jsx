@@ -320,12 +320,12 @@ export default function Header({ onCtaClick }) {
         {/* Right Side */}
         <div className="flex items-center gap-3">
           <a
-            href="tel:+919953315229"
+            href="tel:+918929324727"
             className="hidden lg:inline-flex items-center gap-2 text-[13.5px] font-medium hover:text-[var(--color-steel-3)] transition-colors"
             style={{ color: 'var(--color-ink-2)' }}
           >
             <span className="pulse-dot" />
-            +91 99533 15229
+            +91 8929324727
           </a>
 
           <button
